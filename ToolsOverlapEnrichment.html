@@ -120,7 +120,7 @@
 									<li><a href="#"><img src="image/pytis.png" alt="pra-ge-atlas"/><span>Pra-GE-ATLAS | Soon </span></a></li>
 								</ul>
 							</li>
-							<li><a href="https://doi.org/10.5281/zenodo.7852329"> <i class="fa fa-download"></i>  Download</a></li>
+							<li><a href="Download.html"> <i class="fa fa-download"></i>  Download</a></li>
 						</ul>
 					</div>
 				</nav>
@@ -131,9 +131,43 @@
 			var menu = new cbpHorizontalSlideOutMenu( document.getElementById( 'cbp-hsmenu-wrapper' ) );
 		</script>
   </section>
-  <br>
-  <br>
+
+  <style>
+    :root {
+  --color-light: white;
+  
+  --color-background: var(--color-light);
+  
+  
  
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+
+mark {
+  background: var(--color-accent);
+  color: var(--color-text);
+  font-weight: bold;
+}
+
+.card {
+  background: var(--color-background);
+  border-radius: var(--size-radius);
+  border: 3px solid var(--color-shadow, currentColor);
+  box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
+}
+
+
+  </style>
+  <br>
+  <br>
+  <div class="card" style="width: 95%; margin: auto;">
+    <h2 style="margin-left: 25px; margin-right: 25px; color: black; font-size: xx-large;"><i class="fa fa-coffee" aria-hidden="true"></i> Summary</h2>
+      <p class="input__label" style="text-align: justify; margin-left: 25px; margin-right: 25px; font-size:x-large;">Overlap Enrichment is a small application trying to answer a common question in some omics projects: <strong>Are my features of interest functional and/or evolutionary conserved in other model species?</strong> To fill this gap, we developed this application where users could supply regions of interest in .bed format and check their enrichment in inter-species chromatin states status (CS, annotation and interpretation can be found in the slider third image of <strong><a href="index.html" onMouseOver="this.style.color='#17202A'" onMouseOut="this.style.color='#5F6A6A'"  style="color: #5F6A6A;">Home tab</a></strong> or in the <strong><a href="https://github.com/RocesV/PlantFUNCO_manuscript/" onMouseOver="this.style.color='#17202A'" onMouseOut="this.style.color='#5F6A6A'" style="color: #5F6A6A;">manuscript</a></strong>) and functional (LECIF) / evolutionary (PhyloP) constrained regions. <br><br>Please follow the <strong>Purpose box instructions</strong> and take into account the format specifications <strong>note in Species box</strong>. </p>
+    </div>
+   <br>
+  <br>
       <iframe src="https://rocesv.shinyapps.io/PlantFUNCO/"  style="position:-ms-page; height: 230vh; width: 100%; border: none"></iframe>
       <br>
       <br> 

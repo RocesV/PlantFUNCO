@@ -96,7 +96,7 @@
 							<li>
 								<a href="#"><i class="fa fa-search"></i>   Search<i class="fa fa-chevron-down"></i></a>
 								<ul class="cbp-hssubmenu">
-									<li><a href="SearchGenes_At-Os.html"><img src="image/transcriptAtvsOs.png" alt="transcript" style="height: 75%; width: 75%;"/><span>Gene At-Os</span></a></li>
+                  <li><a href="SearchGenes_At-Os.html"><img src="image/transcriptAtvsOs.png" alt="transcript" style="height: 75%; width: 75%;"/><span>Gene At-Os</span></a></li>
                   <li><a href="SearchGenes_At-Zm.html"><img src="image/transcriptAtvsZm.png" alt="transcript" style="height: 75%; width: 75%;"/><span>Gene At-Zm</span></a></li>
                   <li><a href="SearchGenes_Os-At.html"><img src="image/transcriptOsvsAt.png" alt="transcript" style="height: 75%; width: 75%;"/><span>Gene Os-At</span></a></li>
                   <li><a href="SearchGenes_Os-Zm.html"><img src="image/transcriptOsvsZm.png" alt="transcript" style="height: 75%; width: 75%;"/><span>Gene Os-Zm</span></a></li>
@@ -134,11 +134,92 @@
   <br>
   <br>
  
-      <iframe src="./Tables/SearchGenes_Zm-At.html"  style="position:-ms-page; height: 100vh; width: 100%; border: none"></iframe>
-      <br>
-      <br>
-      <br>
-      <br>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  a {
+    color: inherit;
+  }
+  
+  .wrapper {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+  
+  ol {
+    padding: 1.5rem 1.5rem 1.5rem 4em;
+    border: 0.3rem solid #67A6B1;
+    columns: 25rem;
+    column-gap: 7rem;
+    column-rule: 4px dotted #67A6B1;
+    border-radius: 0.5rem;
+  }
+  
+  ol > * + * {
+    margin-top: 1rem;
+  }
+  
+  li {
+    break-inside: avoid;
+  }
+  
+  ::marker {
+    content: counters(list-item, '') ': ';
+    font-weight: 700;
+    font-size: 1.5em;
+    color: #67A6B1;
+  }
+  
+  li span {
+    display: block;
+  }
+  
+  li span:first-child {
+    font-size: 1.5em;
+  }
+  
+
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <div class="wrapper">
+    <h1>Download documentation</h1>
+    <a href="https://doi.org/10.5281/zenodo.7852329"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.7852329.svg" alt="DOI"></a>
+    <br><br>
+    <ol>
+      <li>
+        <span style="color:black">QUERY-TARGET.next.axt</span>
+        <span style="text-align: justify;"><a style="color: black;">Comparative Genomics:</a> <strong><a href="https://genome.ucsc.edu/goldenPath/help/axt.html">.net.axt</a></strong> includes a set of files describing the alignments derived from whole genome alignment pipeline. A total of 6 .net.axt files are available taking into account all pairwise query-target combinations between the three model species in PlantFUNCO.</span>
+      </li>
+      <li>
+        <span style="color:black">QUERY-TARGET_LECIFscore.bedgraph</span>
+        <span style="text-align: justify;"><a style="color: black;">Functional Genomics:</a> *_LECIFscore.<strong><a href="https://genome.ucsc.edu/goldenPath/help/bedgraph.html">bedgraph</a></strong> includes a set of files reporting functional genomics conservation scores derived from <strong><a href="https://www.nature.com/articles/s41467-021-22653-8">LECIF</a></strong> algorithm. A total of 6 files are available taking into account all pairwise query-target combinations between the three model species in PlantFUNCO. At = <i>Arabidopsis thaliana</i>, Os = <i>Oryza sativa</i>, Zm = <i>Zea mays</i>.</span>
+      </li>
+      <li>
+        <span style="color:black">QUERY_PhyloP_merged.bedgraph</span>
+        <span style="text-align: justify;"><a style="color: black;">Comparative Genomics:</a> *_<strong><a href="https://ionreporter.thermofisher.com/ionreporter/help/GUID-03D1F68A-E646-4B49-AD59-AF2F51874BD2.html">PhyloP</a></strong>_merged.<strong><a href="https://genome.ucsc.edu/goldenPath/help/bedgraph.html">bedgraph</a></strong> includes a set of files reporting merged evolutionary conservation at individual alignment sites from <strong><a href="http://plantregmap.gao-lab.org/">PlantRegMap</a></strong>. A total of 3 files are available taking into account each of the three model species in PlantFUNCO.  Ath = <i>Arabidopsis thaliana</i>, Osj = <i>Oryza sativa</i>, Zma = <i>Zea mays</i>.</span>
+      </li>
+      <li>
+        <span style="color:black">CNE_QUERY_TARGET_45_50.bed</span>
+        <span style="text-align: justify;"><a style="color: black;">Comparative Genomics:</a> CNE_QUERY_TARGET_45_50.<strong><a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format1.7">bed</a></strong> includes a set of files reporting pairwise conserved non-coding elements (CNEs) from whole genome alignment pipeline + <strong><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006940">CNEr</a></strong> with 90% identity threshold. A total of 6 files are available taking into account all pairwise query-target combinations between the three model species in PlantFUNCO.</span>
+      </li>
+      <li>
+        <span style="color:black">*_CNEdb.sqlite</span>
+        <span style="text-align: justify;"><a style="color: black;">Comparative Genomics:</a> *_CNEdb.<strong><a href="https://docs.fileformat.com/database/sqlite/">sqlite</a></strong> summarizes all previous CNEs information into a single and database-friendly file. A total of 3 files are available taking into account all bidirectional query-target combinations between the three model species in PlantFUNCO.</span>
+      </li>
+      <li>
+        <span style="color:black">hihmm.model1.K15.QUERY.*.bed</span>
+        <span style="text-align: justify;"><a style="color: black;">Functional Genomics:</a> hihmm.model1.K15.QUERY.*.<strong><a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format1.7">bed</a></strong> includes a set of files reporting inter-species chromatin states from <strong><a href="https://www.nature.com/articles/nature13415">hiHMM</a></strong> algorithm. Further details on chromatin states annotation and interpretation can be found in the slider third image of <strong><a href="index.html">Home tab</a></strong> or in the <strong><a href="https://github.com/RocesV/PlantFUNCO_manuscript/">manuscript</a></strong>. A total of 3 files are available taking into account each of the three model species in PlantFUNCO.</span>
+      </li>
+    </ol>
+    <a href="https://doi.org/10.5281/zenodo.7852329" style="width:50%; height: 150px;  position:relative; top:10%; bottom: 10%; left:40%; right: 40%;"><i class="ai ai-zenodo ai-10x" style="color: #5F6A6A;" onMouseOver="this.style.color='#67A6B1'" onMouseOut="this.style.color='#5F6A6A'"></i></a>
+  </div>
+
+  <br>
+  <br>
+
+
   <section>
     <footer style="background-color:#67A6B1; height: 50%;">
       <style>
